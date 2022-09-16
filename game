@@ -1,0 +1,52 @@
+import java.util.Random;
+import java.util.*;
+public class p1 {
+     public static void main(String[] args) {
+   Scanner sc = new Scanner(System.in);
+   Random rand = new Random();
+System.out.println("WELCOME TO THE GAME OF STONE PAPER SCISSOR");
+System.out.println("General Instructions");
+System.out.println("Enter 1 to choose STONE");
+System.out.println("Enter 2 to choose PAPER");
+System.out.println("Enter 3 to choose SCISSOR");
+System.out.println("Enter Your Input");
+   int you = sc.nextInt();
+   if (you == 1)
+	  System.out.println("You chose STONE");
+   if (you == 2)
+		  System.out.println("You chose PAPER");
+   if (you == 3)
+		  System.out.println("You chose SCISSOR");
+   
+	int comp = rand.nextInt(3)+1;
+	if (comp == 1)
+		System.out.println("Computer chose STONE");
+	if (comp == 2)
+		System.out.println("Computer chose PAPER");
+	if (comp == 3)
+		System.out.println("Computer chose SCISSOR");
+
+	if (you == 1 && comp == 2)
+			System.out.println("lost");
+    
+	if (you == 2 && comp == 3)
+			System.out.println("lost");
+    
+	if (you == 3 && comp == 1)
+			System.out.println("lost");
+	
+	if (you == 1 && comp == 3)
+		System.out.println("won");
+    
+	if (you == 2 && comp == 1)
+			System.out.println("won");
+    
+	if (you == 3 && comp == 1)
+			System.out.println("won");
+	
+	if (you == comp)
+		System.out.println("draw");
+
+	
+     }
+}
